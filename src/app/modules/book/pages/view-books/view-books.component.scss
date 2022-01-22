@@ -1,0 +1,19 @@
+.books {
+    display: flex;
+    flex-wrap: wrap;
+
+    .book {
+        flex-grow: 1;
+        flex-basis: 300px;
+        margin: 10px;
+
+        span {
+            display: block;
+        }
+
+        img {
+            max-height: 80px;
+            display: block;
+        }
+    }
+}
