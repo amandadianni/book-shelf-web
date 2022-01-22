@@ -4,4 +4,5 @@ export class Book {
     public author!: string;
     public publisher!: string;
     public summary!: string;
+    public imageUrl!: string;
 }

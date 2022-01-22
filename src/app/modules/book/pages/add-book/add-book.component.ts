@@ -15,6 +15,7 @@ export class AddBookComponent implements OnInit {
     publisher: ['', []],
     summary: ['', []]
   });
+  imageSrc: any;
 
   constructor(private formBuilder: FormBuilder,
               private bookService: BookService) { }
@@ -23,17 +24,26 @@ export class AddBookComponent implements OnInit {
   }
 
   addBook = () => {
-    // 
     const book: Book = {
       title: this.addBookForm.value['title'],
       author: this.addBookForm.value['author'],
       publisher: this.addBookForm.value['publisher'],
       summary: this.addBookForm.value['summary'],
+      imageUrl: this.imageSrc,
       bookId: undefined
     };
     this.bookService.addBook(book).subscribe(data => {
       console.log(data);
     });
+  };
+
+  handleInputChange = (e: any) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      this.imageSrc = reader.result;
+    };
   };
 
 }
