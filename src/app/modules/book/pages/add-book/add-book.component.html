@@ -1,0 +1,11 @@
+<form [formGroup]="addBookForm" (ngSubmit)="addBook()">
+	<input type="text" name="title" placeholder="Title" formControlName="title" required>
+	<input type="text" name="author" placeholder="Author" formControlName="author" required>
+	<input type="text" name="publisher" placeholder="Publisher" formControlName="publisher">
+	<textarea name="summary" placeholder="Summary" formControlName="summary"></textarea>
+
+	<div class="submit">
+		<div></div>
+		<button type="submit" [disabled]="!addBookForm.valid">Save</button>
+	</div>
+</form>
