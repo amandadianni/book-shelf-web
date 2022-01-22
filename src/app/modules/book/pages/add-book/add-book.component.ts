@@ -23,7 +23,7 @@ export class AddBookComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addBook = () => {
+  addBook(): void {
     const book: Book = {
       title: this.addBookForm.value['title'],
       author: this.addBookForm.value['author'],
@@ -35,15 +35,15 @@ export class AddBookComponent implements OnInit {
     this.bookService.addBook(book).subscribe(data => {
       console.log(data);
     });
-  };
+  }
 
-  handleInputChange = (e: any) => {
+  handleInputChange(e: any): void {
     const file = e.target.files[0];
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {
       this.imageSrc = reader.result;
     };
-  };
+  }
 
 }
