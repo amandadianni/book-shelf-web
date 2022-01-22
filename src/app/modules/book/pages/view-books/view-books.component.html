@@ -1,1 +1,9 @@
-<p>view-books works!</p>
+<div>
+    <div *ngFor="let book of books; let idx = index;">
+        <img [src]="book.imageUrl" *ngIf="book.imageUrl" />
+        <span>{{ book.title }}</span>
+        <span>{{ book.author }}</span>
+        <span>{{ book.publisher }}</span>
+        <span>{{ book.summary }}</span>
+    </div>
+</div>
