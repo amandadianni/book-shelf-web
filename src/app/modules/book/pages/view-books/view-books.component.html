@@ -1,9 +1,9 @@
 <div infinite-scroll (scrolled)="onScrollDown($event)" [infiniteScrollDistance]="0" class="books">
-    <div *ngFor="let book of books; let idx = index;" class="book">
+    <div *ngFor="let book of books; let idx = index;" class="book" title="{{ book.summary }}">
         <img [src]="book.imageUrl" *ngIf="book.imageUrl" />
+        <img src="../../../../../assets/images/no-image.png" *ngIf="!book.imageUrl" />
         <span class="title">{{ book.title }}</span>
-        <span class="author">{{ book.author }}</span>
-        <span class="publisher">{{ book.publisher }}</span>
-        <span class="summary">{{ book.summary }}</span>
+        <span class="author">Author: {{ book.author }}</span>
+        <span class="publisher" *ngIf="book.publisher">Publisher: {{ book.publisher }}</span>
     </div>
 </div>

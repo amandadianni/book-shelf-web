@@ -1,4 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/index';
+
 * {
     font-family: 'Open Sans', sans-serif;
 } 
+
+html {
+    position:relative;
+}
+
+body {
+    height: 100%;
+    background-color: #f2f0f0;
+}

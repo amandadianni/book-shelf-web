@@ -1,19 +1,46 @@
+
+
 .books {
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
 
     .book {
         flex-grow: 1;
-        flex-basis: 300px;
         margin: 10px;
+        width: 300px;
+        max-width: 300px;
+        background-color: #fff;
+        font-size: 15px;
+        padding: 10px;
 
         span {
             display: block;
         }
 
         img {
-            max-height: 80px;
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
             display: block;
+            margin: 0 auto;
+            padding-bottom: 10px;
+        }
+
+        .title {
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .author {
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .publisher {
+            text-align: center;
+            font-size: 13px;
         }
     }
 }

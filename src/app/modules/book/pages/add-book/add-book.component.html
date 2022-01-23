@@ -1,11 +1,13 @@
 <form [formGroup]="addBookForm" (ngSubmit)="addBook()">
-    <div>
-        <input type="file" name="imageUrl" accept="image/*" (change)="handleInputChange($event)" />
-        <img [src]="imageSrc" *ngIf="imageSrc" />
+    <div class="content-left">
+        <div class="upload">
+            <input type="file" name="imageUrl" accept="image/*" (change)="handleInputChange($event)" />
+            <img [src]="imageSrc" *ngIf="imageSrc" />
+        </div>
     </div>
-    <div>
-        <input type="text" name="title" placeholder="Title" formControlName="title" required>
-        <input type="text" name="author" placeholder="Author" formControlName="author" required>
+    <div  class="content-right">
+        <input type="text" name="title" placeholder="Title *" formControlName="title" required>
+        <input type="text" name="author" placeholder="Author *" formControlName="author" required>
         <input type="text" name="publisher" placeholder="Publisher" formControlName="publisher">
         <textarea name="summary" placeholder="Summary" formControlName="summary"></textarea>
 
