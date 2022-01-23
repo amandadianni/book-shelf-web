@@ -1,27 +1,41 @@
-# BookShelfWeb
+# Bookshelf Web
 
+This is a WorkSample frontend for a bookshelf application.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
-## Development server
+## What this is about
+It allows user to add new books to the shelf and list all books in the shelf, with pagination.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Details
+* Angular
+    * This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
-## Code scaffolding
+## Running the application
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Pre requisites
+* Npm >= 16
+* You can use nvm to manage the node versions: https://github.com/nvm-sh/nvm
 
-## Build
+### Running
+* Inside root directory of the project, run the following command via terminal:
+```shell
+npm install
+```
+* After all dependencies are installed, you can run the following command via terminal:
+```shell
+ng serve --open
+```
+or
+```shell
+npm start
+```
+* The application will execute on port 4200 in your localhost
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Coming next
+* Tests
+* Docker
+* Security
+* New functionalities:
+  * Creating book series
+  * Filtering search
+  * Ordering search
