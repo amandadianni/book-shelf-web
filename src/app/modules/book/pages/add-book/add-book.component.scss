@@ -63,6 +63,11 @@ form {
             padding: 20px;
             font-weight: 600;
 
+            &:disabled {
+                background-color: #cccccc;
+                color: #666666;
+            }
+
             @include desktop {
                 width: 20rem;
             }

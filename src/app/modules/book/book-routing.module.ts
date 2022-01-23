@@ -13,11 +13,6 @@ const routes: Routes = [
       { path: 'view', component: ViewBooksComponent }
     ]
   },
-  {
-    path: '/book',
-    redirectTo: '/book/view',
-    pathMatch: 'full'
-  },
 ];
 
 @NgModule({
