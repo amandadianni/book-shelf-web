@@ -1,7 +1,6 @@
 # Bookshelf Web
 
 This is a WorkSample frontend for a bookshelf application.
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
 ## What this is about
 It allows user to add new books to the shelf and list all books in the shelf, with pagination.
